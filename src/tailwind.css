@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Vazir";
+    src: url("../dist/fonts/Vazir.eot");
+    /* IE9 Compat Modes */
+    src: url("../dist/fonts/Vazir.eot?#iefix") format("embedded-opentype"),
+      url("../dist/fonts/Vazir.woff2") format("woff2"),
+      url("../dist/fonts/Vazir.woff") format("woff"),
+      url("../dist/fonts/Vazir.ttf") format("truetype");
+    /* Safari, Android, iOS */
+  }
+}
+
+@layer components {
+  .btn {
+    @apply py-2 px-4 rounded-full transition duration-300 ease-in-out;
+  }
+  .btn-primary {
+    @apply text-white bg-indigo-600 hover:bg-gray-100 hover:text-black;
+  }
+  .btn-secondary {
+    @apply bg-gray-100 hover:bg-indigo-600 text-black hover:text-white dark:text-black dark:hover:text-white;
+  }
+  .nav-item {
+    @apply transition duration-300 ease-in-out hover:border-b-2 hover:border-indigo-600;
+  }
+  .nav-item-active {
+    @apply border-b-2 border-indigo-600;
+  }
+  [x-cloak] {
+    display: none !important;
+  }
+
+  .form-label {
+    @apply text-gray-800 font-bold block dark:text-white;
+  }
+
+  .form-input {
+    @apply w-full border border-gray-300 mt-3 py-2 px-3 rounded focus:outline-none focus:ring-4 focus:ring-opacity-50 focus:ring-indigo-600 dark:bg-gray-800;
+  }
+  
+}
+
+@layer utilities {
+  .fill-gray-100 {
+    fill: #f3f4f6;
+  }
+  .fill-gray-800 {
+    fill: #1f2937;
+  }
+  .grid_top {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+grid_top_sm{
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid_container {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "content"
+      "sidebar"
+      "new"
+      "service"
+      "price"
+      "galery"
+      "footer";
+    grid-gap: 0.75rem; 
+  }
+
+   .grid_container_sm {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "content"
+      "sidebar"
+      "new"
+      "service"
+      "price"
+      "galery"
+      "footer";
+    grid-gap: 0.75rem;
+  }
+
+  .grid_container_md {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "content"
+      "sidebar"
+      "new"
+      "service"
+      "price"
+      "galery"
+      "footer";
+    grid-gap: 0.75rem;
+  }
+
+  .grid_container_lg {
+    display: grid;
+    grid-template-areas:
+    "header  header header header header header header header"
+    "content content content content content content content sidebar"
+    "new new new new new new new new"
+    "service  service service service service service service service"
+    "price price price price price price price price"
+    "galery galery galery galery galery galery galery galery"
+    "footer footer footer footer footer footer footer footer";
+  grid-gap: 0.75rem;
+  }
+}
+
+
+
+
+
+
+#header {
+  grid-area: header;
+}
+#content {
+  grid-area: content;
+}
+#topnew {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#topimg{}
+
+
+#sidebar {
+  grid-area: sidebar;
+}
+#new {
+  grid-area: new;
+}
+#service {
+  grid-area: service;
+}
+#price {
+  grid-area: price;
+}
+#galery {
+  grid-area: galery;
+}
+#footer {
+  grid-area: footer;
+}
+
+#header,
+#content,
+#sidebar,
+#new,
+#service,
+#price,
+#galery,
+#footer,
+#topnew,
+#topimg {
+  border: 0px solid rgba(15, 15, 15, 0.8);
+}
+
+.w-80 {
+  width: 80%;
+}
+.h-80 {
+  height: 80%;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.mb-5 {
+  margin-bottom: 1.25rem; /* 20px */
+}
+.mb-4	{margin-bottom: 1rem; /* 16px */}
+.mt-2 {
+  margin-top: 0.5rem; /* 8px */
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.indent-2 {
+  text-indent: 0.5rem; /* 8px */
+}
+.indent-16 {
+  text-indent: 4rem; /* 64px */
+}
+
+.gap-x-3 {
+  column-gap: 0.75rem; /* 12px */
+}
+
+
+.place-content-stretch	{place-content: stretch;}
+.place-content-center	{place-content: center;}
+.place-items-center	{place-items: center;}
+.content-center	{align-content: center;}
