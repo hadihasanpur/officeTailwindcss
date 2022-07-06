@@ -1,7 +1,7 @@
 module.exports = {
   // mode: 'jit',
-  content: ["./index.html"],
-  darkMode: 'class', // or 'media' or 'class'
+  content: ["./index.html", "./grid.html","./index2.html"],
+  darkMode: "class", // or 'media' or 'class'
   theme: {
     fontFamily: {
       vazir: ["Vazir"],
@@ -16,5 +16,5 @@ module.exports = {
       },
     },
   },
-
+  Plugin: [require("@tailwindcss/aspect-ratio")],
 };
